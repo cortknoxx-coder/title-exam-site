@@ -236,7 +236,7 @@ export default function Dashboard() {
             ) : (
               <div className="premium-card" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 <h3 className="serif-title">Examiner Audit Guidelines</h3>
-                <p style={{ fontSize: "0.9rem" }}>Welcome to the Aurelius Field Dispatch Console. Follow these required guidelines when auditing county records rooms:</p>
+                <p style={{ fontSize: "0.9rem" }}>Welcome to the Title Services Field Dispatch Console. Follow these required guidelines when auditing county records rooms:</p>
                 <div className={styles.guidelineBox}>
                   <h4>1. Primary Vault Sourcing</h4>
                   <p>All chain elements must be matched to physical grantor-grantee books. Electronic index lookups must be cross-verified with microfilm images.</p>

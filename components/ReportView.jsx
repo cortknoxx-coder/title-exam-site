@@ -61,7 +61,7 @@ export default function ReportView({ property, searchType }) {
         setDownloadingFile(null);
         
         let reportTitle = "CERTIFIED COUNTY RECORD ARCHIVE RETRIEVAL";
-        let contentBody = `AURELIUS TITLE SERVICES - COUNTY RECORD CLERK DISPATCH\n`;
+        let contentBody = `TITLE SERVICES - COUNTY RECORD CLERK DISPATCH\n`;
         contentBody += `========================================================\n`;
         contentBody += `TICKET ID: ${property.ticketId || "#AX-2026-Pending"}\n`;
         contentBody += `PROPERTY APN: ${property.apn}\n`;
@@ -117,7 +117,7 @@ export default function ReportView({ property, searchType }) {
         
         contentBody += `========================================================\n`;
         contentBody += `🏛️ CERTIFIED PRIMARY SOURCE RECORDS VERIFICATION SEAL\n`;
-        contentBody += `AURELIUS TITLE GROUP INC. • SECURE B2B RECORDS ARCHIVE\n`;
+        contentBody += `TITLE SERVICES GROUP INC. • SECURE B2B RECORDS ARCHIVE\n`;
         
         // Generate a text file blob containing high-fidelity certified record logs and download it
         const blob = new Blob([contentBody], { type: "text/plain;charset=utf-8" });
@@ -518,7 +518,7 @@ export default function ReportView({ property, searchType }) {
               <p className={styles.certText}>
                 {searchType === "land_search" ? (
                   <>
-                    Aurelius Title Registry hereby certifies that the subject property, Assessor's Parcel Number 
+                    Title Registry hereby certifies that the subject property, Assessor's Parcel Number 
                     <strong> {property.apn} </strong> in <strong> {property.county} County </strong> has been examined 
                     by our dispatched field runners. Onsite municipal plat maps, ad-valorem tax rolls, parcel acreage boundaries, 
                     and zoning bounds have been physically retrieved, scanned, and verified onsite directly from the county assessor 
@@ -526,7 +526,7 @@ export default function ReportView({ property, searchType }) {
                   </>
                 ) : (
                   <>
-                    Aurelius Title Registry hereby certifies that the subject property, Assessor's Parcel Number 
+                    Title Registry hereby certifies that the subject property, Assessor's Parcel Number 
                     <strong> {property.apn} </strong> in <strong> {property.county} County </strong> has been examined 
                     by our dispatched field runners. Recording deeds, deeds of trust, covenants, and open liens have been physically 
                     retrieved, photocopied, and verified onsite directly from the official indices at the Clerk of Court record vaults, 
@@ -536,7 +536,7 @@ export default function ReportView({ property, searchType }) {
               </p>
               <div className={styles.certSignature}>
                 <div>
-                  <span className={styles.signatureCursive}>Aurelius Field Audit</span>
+                  <span className={styles.signatureCursive}>Field Audit Team</span>
                   <span>Courthouse Examiner</span>
                 </div>
                 <div className={styles.blockchainBadge}>

@@ -84,7 +84,7 @@ export default function DocViewer({ doc, onClose }) {
         {/* Left Side: Mock Scanned Document */}
         <div className={styles.documentPaper}>
           <div className={styles.microfilmStrip}>
-            <span>📼 AURELIUS DIGITAL MICROFILM PROJECTOR v1.1</span>
+            <span>📼 TITLE SERVICES DIGITAL MICROFILM PROJECTOR v1.1</span>
             <span>INDEX NO: {doc.documentNumber}</span>
           </div>
 

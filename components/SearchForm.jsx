@@ -80,7 +80,7 @@ export default function SearchForm() {
   const [processStep, setProcessStep] = useState(0);
 
   const processingPhrases = [
-    "Registering courthouse examination orders in Aurelius dispatch logs...",
+    "Registering courthouse examination orders in Title Services dispatch logs...",
     "Sending dispatch notifications to cortney@dpaconsortium.org...",
     "Assigning field runners to target county courthouse locations...",
     "Alerting vault teams for physical book lookups...",

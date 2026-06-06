@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aurelius | Title Examination & GIS Command Center",
+  title: "Title Services | Title Examination & GIS Command Center",
   description: "Instant professional-grade title chain reporting, document retrieval, and GIS boundary mapping for Santa Clara, Alameda, and San Mateo counties.",
 };
 

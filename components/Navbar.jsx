@@ -6,8 +6,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          <span className="serif-title">Aurelius</span>
-          <span className={styles.logoSub}>Title Services</span>
+          <span className="serif-title">Title Services</span>
         </Link>
 
         <nav className={styles.navLinks}>

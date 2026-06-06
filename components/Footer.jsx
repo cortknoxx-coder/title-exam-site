@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.branding}>
-          <h2 className="serif-title">Aurelius</h2>
+          <h2 className="serif-title">Title Services</h2>
           <p className={styles.subtext}>
             High-fidelity title examination reports and document retrieval for 
             California Bay Area counties. Powered by an automated parsing engine.
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p>© {currentYear} Aurelius Title Services. All rights reserved.</p>
+        <p>© {currentYear} Title Services. All rights reserved.</p>
         <p className={styles.disclaimer}>
           Privacy Policy • Terms of Service • Licensed Escrow & County Recording Solutions
         </p>
