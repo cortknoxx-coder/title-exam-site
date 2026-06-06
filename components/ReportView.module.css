@@ -1,0 +1,492 @@
+.reportContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 80px;
+  animation: fadeIn var(--transition-normal);
+}
+
+.headerBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(223, 177, 91, 0.03), rgba(18, 22, 31, 0.75)) !important;
+}
+
+.addressTitle {
+  font-size: 1.8rem;
+  margin: 10px 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.apnLine {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.certSealBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(223, 177, 91, 0.05);
+  border: 1px dashed rgba(223, 177, 91, 0.3);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+}
+
+.sealCheck {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.certSealBox span {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.certSealBox strong {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Split Grid Layout */
+.gridSplit {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Card Header inside tables */
+.cardHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.cardSubtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* General Report Tables */
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: 8px;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.reportTable th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.reportTable td {
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.reportTable tbody tr:hover {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.releasedRow td {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.releasedRow span {
+  text-decoration: none !important;
+}
+
+.mortAmount {
+  color: var(--primary);
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.noEncumbText {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Tax Assessor Box */
+.taxSummaryBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.taxHighlightBox {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.taxHighlightBox span:first-child {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.taxHighlightBox h2 {
+  font-size: 1.8rem;
+  margin: 8px 0 6px;
+  color: var(--primary);
+}
+
+.taxVal {
+  font-size: 1.4rem;
+  margin: 8px 0 2px;
+  color: var(--text-primary);
+}
+
+.taxAssessmentSplit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 8px;
+}
+
+.taxDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.taxDetailsGrid span {
+  color: var(--text-muted);
+}
+
+/* Report Certification Card */
+.certCard {
+  border: 1px solid rgba(223, 177, 91, 0.2) !important;
+  background: radial-gradient(circle at top right, rgba(223, 177, 91, 0.03), transparent 70%), var(--glass-bg) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.certCardHeader {
+  position: relative;
+  border-bottom: 1px solid rgba(223, 177, 91, 0.1);
+  padding-bottom: 12px;
+}
+
+.goldLace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.certCardHeader h3 {
+  font-size: 1.2rem;
+}
+
+.certText {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--text-secondary);
+}
+
+.certSignature {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(223, 177, 91, 0.1);
+  padding-top: 16px;
+}
+
+.certSignature div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signatureCursive {
+  font-family: 'Playfair Display', cursive;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.certSignature span:last-child {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.blockchainBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.blockchainBadge span:first-child {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.hashText {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--primary);
+  background: rgba(223, 177, 91, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(223, 177, 91, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .gridSplit {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .taxSummaryBox {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Certified Attachments list in right column */
+.attachmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.attachmentRow {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.attachmentRow:hover {
+  background: rgba(223, 177, 91, 0.04);
+  border-color: rgba(223, 177, 91, 0.3);
+  transform: translateX(2px);
+}
+
+.fileIcon {
+  font-size: 1.8rem;
+}
+
+.fileMeta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fileMeta span:first-child {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.fileMeta strong {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.fileMetaSize {
+  font-size: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.downloadIconBadge {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.attachmentRow:hover .downloadIconBadge {
+  color: var(--primary);
+}
+
+/* Download Overlay */
+.downloadOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.downloadModal {
+  max-width: 440px;
+  width: 90%;
+  padding: 32px !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid rgba(223, 177, 91, 0.2) !important;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(223, 177, 91, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.fileBadge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Run Sheet Exhibit Box styling */
+.runSheetExhibitBox {
+  margin-top: 16px;
+}
+
+.tableHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.runSheetReportTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.runSheetReportTable th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.runSheetReportTable td {
+  padding: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.runSheetReportTable tbody tr:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* Print Overrides for Run Sheet */
+@media print {
+  .runSheetExhibitBox {
+    page-break-before: always;
+    margin-top: 40px !important;
+  }
+  .runSheetReportTable th {
+    border-bottom: 1px solid #000000 !important;
+    color: #000000 !important;
+  }
+  .runSheetReportTable td {
+    border-bottom: 1px solid #e2e8f0 !important;
+    color: #000000 !important;
+  }
+}

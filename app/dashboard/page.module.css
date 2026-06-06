@@ -1,0 +1,422 @@
+.dashHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 24px;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+/* Elegant Switch Toggle */
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+}
+
+.toggleLabelActive {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toggleLabelMuted {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  transition: .4s;
+  border-radius: var(--radius-full);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--text-secondary);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: rgba(223, 177, 91, 0.1);
+  border-color: var(--primary);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+  background-color: var(--primary);
+}
+
+/* Metrics Grid */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.metricHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.metricIcon {
+  font-size: 1.1rem;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.metricsGrid h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 12px 0 6px;
+}
+
+.metricsGrid p {
+  font-size: 0.8rem;
+}
+
+.positiveGrowth {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.neutralGrowth {
+  color: var(--text-muted);
+}
+
+.activePulse {
+  color: var(--warning);
+  font-weight: 500;
+  animation: pulse-glow 1.5s infinite;
+}
+
+/* Guideline Box inside Examiner Mode */
+.guidelineBox {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.guidelineBox h4 {
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.guidelineBox p {
+  font-size: 0.8rem;
+}
+
+/* Console Grid Split */
+.consoleGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.consoleTitle {
+  margin-bottom: 16px;
+}
+
+.consoleTitle h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.searchConsole {
+  display: flex;
+  flex-direction: column;
+}
+
+.recentOrdersConsole {
+  display: flex;
+  flex-direction: column;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderCard {
+  background: rgba(255, 255, 255, 0.01) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 16px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-fast) !important;
+}
+
+.orderCard:hover {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-color: rgba(223, 177, 91, 0.15) !important;
+}
+
+.orderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ticketId {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--primary);
+  background: var(--primary-glow);
+  border: 1px solid rgba(223, 177, 91, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.orderTop h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.orderApn {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.orderBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 10px;
+}
+
+.orderMetadata {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-secondary);
+}
+
+.typeHighlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.orderDate {
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+/* Console buttons */
+.orderControls {
+  border-top: 1px dashed rgba(255, 255, 255, 0.04);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.examinerBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.examinerCheckBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--success);
+  background: var(--success-glow);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+}
+
+.clientActiveAlert {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--warning);
+  animation: pulse-glow 2s infinite;
+}
+
+/* Interactive Action overlays */
+.interactiveOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.actionModal {
+  max-width: 480px;
+  width: 90%;
+  padding: 40px !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(223, 177, 91, 0.2) !important;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(223, 177, 91, 0.05) !important;
+  animation: slideUp 0.25s ease-out;
+}
+
+.actionSuccess {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(16, 185, 129, 0.05) !important;
+}
+
+.uploadSpinner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(223, 177, 91, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.emailSpinner {
+  font-size: 2.5rem;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--success-glow);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.uploadOrderBadge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.emailRoutingDetails {
+  width: 100%;
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.emailRoutingDetails span {
+  color: var(--text-muted);
+}
+
+.emailSuccessLabel {
+  font-size: 0.95rem;
+  color: var(--primary);
+  font-family: monospace;
+  background: var(--primary-glow);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+  .consoleGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .examinerBtns {
+    flex-direction: column;
+  }
+}

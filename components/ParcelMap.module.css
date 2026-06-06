@@ -1,0 +1,236 @@
+.mapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.activeTab {
+  background: var(--bg-tertiary);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.mapViewport {
+  position: relative;
+  background: #090d13;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.zoningMode {
+  background: #061118;
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.svgMap {
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+}
+
+.adjoiningParcel {
+  fill: rgba(255, 255, 255, 0.015);
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.adjoiningParcel:hover {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.subjectParcel {
+  fill: rgba(223, 177, 91, 0.04);
+  stroke: var(--primary);
+  stroke-width: 2;
+  box-shadow: 0 0 10px rgba(223, 177, 91, 0.2);
+  transition: fill var(--transition-normal);
+}
+
+.zoningMode .subjectParcel {
+  fill: rgba(59, 130, 246, 0.1);
+  stroke: var(--info);
+}
+
+.parcelText {
+  fill: var(--text-muted);
+  font-size: 7px;
+  text-anchor: middle;
+  letter-spacing: 0.05em;
+  font-family: monospace;
+  pointer-events: none;
+}
+
+.subjectText {
+  fill: var(--primary);
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.zoningMode .subjectText {
+  fill: var(--info);
+}
+
+.subjectSubText {
+  fill: var(--text-secondary);
+  font-size: 8px;
+  text-anchor: middle;
+  font-family: monospace;
+  pointer-events: none;
+}
+
+.dimText {
+  fill: var(--text-muted);
+  font-size: 6.5px;
+  text-anchor: middle;
+  font-family: monospace;
+}
+
+.dimTextVert {
+  fill: var(--text-muted);
+  font-size: 6.5px;
+  text-anchor: middle;
+  font-family: monospace;
+}
+
+.easementLabel {
+  fill: var(--danger);
+  font-size: 5.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-anchor: middle;
+}
+
+.zoningOverlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(6, 17, 24, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.mapControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.legendColor {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.inspectionDrawer {
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  animation: slideUp 0.2s ease-out;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.drawerHeader h4 {
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.closeBtn:hover {
+  color: var(--text-primary);
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+
+.drawerContent span {
+  color: var(--text-muted);
+}
+
+.instructionText {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
